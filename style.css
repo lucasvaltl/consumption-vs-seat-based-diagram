@@ -264,6 +264,50 @@ html, body {
 
 
 
+/* ─── Tag Lists (health signals, expansion levers) ─────────────────────────── */
+
+.row--tall {
+  min-height: 80px;
+}
+
+.cell--top {
+  align-items: flex-start;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.cell--seat .tag-list {
+  justify-content: flex-end;
+}
+
+.cell--usage .tag-list {
+  justify-content: flex-start;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--gray-700);
+  background: var(--gray-100);
+  padding: 3px 8px;
+  border-radius: 2px;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+.tag--signal {
+  background: var(--accent-dim);
+  color: var(--accent);
+  font-weight: 500;
+}
+
 /* ─── Utility ───────────────────────────────────────────────────────────────── */
 
 @media (max-width: 1024px) {
