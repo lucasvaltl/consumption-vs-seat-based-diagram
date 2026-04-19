@@ -316,12 +316,108 @@ html, body {
     font-size: 24px;
   }
 
-  .model-labels,
   .row {
     grid-template-columns: 1fr 140px 1fr;
   }
 
   .cell-value {
     font-size: 12px;
+  }
+}
+
+@media (max-width: 680px) {
+  :root {
+    --page-pad-x: 16px;
+    --page-pad-y: 20px;
+  }
+
+  /* Header */
+  .header-title {
+    font-size: 20px;
+  }
+
+  .header-sub {
+    font-size: 12px;
+  }
+
+  /* Summary cards stack vertically */
+  .model-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .model-card-title {
+    font-size: 18px;
+  }
+
+  .model-card-body {
+    font-size: 12px;
+  }
+
+  /* Each row becomes a vertical block:
+     dimension label → seat cell → consumption cell */
+  .row {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  .dimension {
+    order: -1;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid var(--gray-100);
+    justify-content: flex-start;
+    padding: 6px 14px;
+    background: var(--gray-50);
+  }
+
+  .cell--seat {
+    justify-content: flex-start;
+    text-align: left;
+    border-right: none;
+    border-bottom: 1px solid var(--gray-100);
+  }
+
+  .cell--seat::before {
+    content: 'SEAT';
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 8px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    color: var(--gray-300);
+    margin-bottom: 4px;
+  }
+
+  .cell--usage::before {
+    content: 'CONSUMPTION';
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 8px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+
+  .cell--seat,
+  .cell--usage {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cell-value {
+    font-size: 13px;
+    max-width: 100%;
+  }
+
+  /* Tag lists */
+  .cell--seat .tag-list,
+  .cell--usage .tag-list {
+    justify-content: flex-start;
+  }
+
+  /* Category headers */
+  .category-name {
+    font-size: 10px;
   }
 }
