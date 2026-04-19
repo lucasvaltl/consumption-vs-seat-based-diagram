@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   root: '.',
-  base: '/consumption-vs-seat-based-diagram/',
+  base: '/s-vs-c/',
   build: {
     outDir: 'docs',
     emptyOutDir: true
