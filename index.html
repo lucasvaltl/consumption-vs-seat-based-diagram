@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seat-Based vs. Usage-Based Pricing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header-inner">
+        <div class="header-label">PRICING MODEL FRAMEWORK</div>
+        <h1 class="header-title">Seat-Based <span class="vs">vs.</span> Usage-Based</h1>
+        <p class="header-sub">A framework for understanding the structural tradeoffs between fixed-seat and consumption-based pricing — in the context of AI products.</p>
+      </div>
+      <div class="model-cards">
+        <div class="model-card model-card--seat">
+          <div class="model-card-title">Seat-Based</div>
+          <p class="model-card-body">Fixed cost per user. Predictable revenue, simple to budget — but penalises low usage and disconnects cost from value. Best when usage is uniform and margins are known.</p>
+        </div>
+        <div class="model-card model-card--usage">
+          <div class="model-card-title">Usage-Based</div>
+          <p class="model-card-body">Pay for what you consume. Cost tracks value, entry is frictionless, and expansion is automatic — but requires stronger product and harder adoption work. Best when usage is variable or unpredictable.</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN GRID -->
+    <main class="grid">
+
+      <!-- CATEGORY: Economics & Margins -->
+      <div class="category-header" style="grid-column: 1 / -1;">
+        <span class="category-tag">01</span>
+        <span class="category-name">ECONOMICS &amp; MARGINS</span>
+      </div>
+
+      <div class="row">
+        <div class="cell cell--seat">
+          <span class="cell-value">Fixed MRR — predictable, regardless of usage</span>
+        </div>
+        <div class="dimension">
+          <span class="dimension-label">Revenue predictability</span>
+        </div>
+        <div class="cell cell--usage">
+          <span class="cell-value">Variable — tied directly to consumption volume</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="cell cell--seat cell--risk">
+          <span class="cell-value">Negative margins if power users exceed expected usage</span>
+        </div>
+        <div class="dimension">
+          <span class="dimension-label">Margin risk</span>
+        </div>
+        <div class="cell cell--usage cell--advantage">
+          <span class="cell-value">Protected — cost scales with revenue by design</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="cell cell--seat">
+          <span class="cell-value">Assumes uniform distribution across all seats</span>
+        </div>
+        <div class="dimension">
+          <span class="dimension-label">Cost modeling</span>
+        </div>
+        <div class="cell cell--usage">
+          <span class="cell-value">Reflects actual usage distribution in real time</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="cell cell--seat">
+          <span class="cell-value">Per seat / per month</span>
+        </div>
+        <div class="dimension">
+          <span class="dimension-label">Pricing unit</span>
+        </div>
+        <div class="cell cell--usage">
+          <span class="cell-value">Per token / per call / per outcome</span>
+        </div>
+      </div>
+
+      <!-- CATEGORY: Buyer Entry & Commitment -->
+      <div class="category-header" style="grid-column: 1 / -1;">
+        <span class="category-tag">02</span>
+        <span class="category-name">BUYER ENTRY &amp; COMMITMENT</span>
+      </div>
+
+      <div class="row">
+        <div class="cell cell--seat cell--risk">
+          <span class="cell-value">High — must commit before knowing true value</span>
+        </div>
+        <div class="dimension">
+          <span class="dimension-label">Entry barrier</span>
+        </div>
+        <div class="cell cell--usage cell--advantage">
+          <span class="cell-value">Low — pay as you go, start with zero commitment</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="cell cell--seat cell--risk">
+          <span class="cell-value">Upfront seat count decision required</span>
+        </div>
+        <div class="dimension">
+          <span class="dimension-label">Commitment required</span>
+        </div>
+        <div class="cell cell--usage cell--advantage">
+          <span class="cell-value">None — scale up or down at any time</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="cell cell--seat cell--risk">
+          <span class="cell-value" data-quote>"If I give them a seat, they cost me forever"</span>
+        </div>
+        <div class="dimension">
+          <span class="dimension-label">Adding new users</span>
+        </div>
+        <div class="cell cell--usage cell--advantage">
+          <span class="cell-value">Inviting users is free — cost only accrues on use</span>
+        </div>
+      </div>
+
+      <!-- CATEGORY: Value ↔ Cost Alignment -->
+      <div class="category-header" style="grid-column: 1 / -1;">
+        <span class="category-tag">03</span>
+        <span class="category-name">VALUE ↔ COST ALIGNMENT</span>
+      </div>
+
+      <div class="row">
+        <div class="cell cell--seat cell--risk">
+          <span class="cell-value">Weak — pay regardless of whether value is delivered</span>
+        </div>
+        <div class="dimension">
+          <span class="dimension-label">Value-cost coupling</span>
+        </div>
+        <div class="cell cell--usage cell--advantage">
+          <span class="cell-value">Strong — cost is a direct proxy for value received</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="cell cell--seat cell--risk">
+          <span class="cell-value">Yes — low-usage seats still billed at full rate</span>
+        </div>
+        <div class="dimension">
+          <span class="dimension-label">Idle user penalty</span>
+        </div>
+        <div class="cell cell--usage cell--advantage">
+          <span class="cell-value">None — idle users generate zero cost</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="cell cell--seat">
+          <span class="cell-value">Harder to demonstrate — usage and spend are decoupled</span>
+        </div>
+        <div class="dimension">
+          <span class="dimension-label">ROI clarity</span>
+        </div>
+        <div class="cell cell--usage">
+          <span class="cell-value">Direct — usage volume maps to value delivered</span>
+        </div>
+      </div>
+
+      <!-- CATEGORY: Upsell Mechanics -->
+      <div class="category-header" style="grid-column: 1 / -1;">
+        <span class="category-tag">04</span>
+        <span class="category-name">UPSELL MECHANICS</span>
+      </div>
+
+      <div class="row">
+        <div class="cell cell--seat cell--risk">
+          <span class="cell-value">Explicit — requires a deliberate sales act</span>
+        </div>
+        <div class="dimension">
+          <span class="dimension-label">Upsell motion</span>
+        </div>
+        <div class="cell cell--usage cell--advantage">
+          <span class="cell-value">Implicit — use more, pay more, automatically</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="cell cell--seat">
+          <span class="cell-value">More seats, tier upgrade, or add-on purchase</span>
+        </div>
+        <div class="dimension">
+          <span class="dimension-label">Expansion trigger</span>
+        </div>
+        <div class="cell cell--usage">
+          <span class="cell-value">Deeper usage — new use cases, more automation</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="cell cell--seat cell--risk">
+          <span class="cell-value">High — budget approval, procurement cycle</span>
+        </div>
+        <div class="dimension">
+          <span class="dimension-label">Upsell friction</span>
+        </div>
+        <div class="cell cell--usage cell--advantage">
+          <span class="cell-value">Low — expansion happens without a sales conversation</span>
+        </div>
+      </div>
+
+      <!-- CATEGORY: Adoption Strategy -->
+      <div class="category-header" style="grid-column: 1 / -1;">
+        <span class="category-tag">05</span>
+        <span class="category-name">ADOPTION STRATEGY</span>
+      </div>
+
+      <div class="row">
+        <div class="cell cell--seat">
+          <span class="cell-value">Broad seat activation — any engagement counts</span>
+        </div>
+        <div class="dimension">
+          <span class="dimension-label">Activation goal</span>
+        </div>
+        <div class="cell cell--usage">
+          <span class="cell-value">Deep, sustained usage — real workflows, not logins</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="cell cell--seat">
+          <span class="cell-value">Generic onboarding across all seats</span>
+        </div>
+        <div class="dimension">
+          <span class="dimension-label">Onboarding approach</span>
+        </div>
+        <div class="cell cell--usage">
+          <span class="cell-value">Use-case-specific — guide each user to their value moment</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="cell cell--seat cell--advantage">
+          <span class="cell-value">Lower — one-time activation per seat is sufficient</span>
+        </div>
+        <div class="dimension">
+          <span class="dimension-label">Activation effort</span>
+        </div>
+        <div class="cell cell--usage cell--risk">
+          <span class="cell-value">Higher — must drive recurring, habitual usage</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="cell cell--seat cell--advantage">
+          <span class="cell-value">Moderate — stickiness matters, depth less so</span>
+        </div>
+        <div class="dimension">
+          <span class="dimension-label">Product requirement</span>
+        </div>
+        <div class="cell cell--usage cell--risk">
+          <span class="cell-value">High — product must actively guide users to value</span>
+        </div>
+      </div>
+
+      <!-- CATEGORY: Risk Profile -->
+      <div class="category-header" style="grid-column: 1 / -1;">
+        <span class="category-tag">06</span>
+        <span class="category-name">RISK PROFILE</span>
+      </div>
+
+      <div class="row">
+        <div class="cell cell--seat cell--risk">
+          <span class="cell-value">Margin erosion from power users exceeding assumptions</span>
+        </div>
+        <div class="dimension">
+          <span class="dimension-label">Vendor risk</span>
+        </div>
+        <div class="cell cell--usage cell--risk">
+          <span class="cell-value">Revenue volatility if usage drops or is seasonal</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="cell cell--seat cell--risk">
+          <span class="cell-value">Overpaying for unused seats across the org</span>
+        </div>
+        <div class="dimension">
+          <span class="dimension-label">Buyer risk</span>
+        </div>
+        <div class="cell cell--usage cell--risk">
+          <span class="cell-value">Unpredictable bills at scale — hard to budget</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="cell cell--seat cell--advantage">
+          <span class="cell-value">Usage and margins are predictable and uniform</span>
+        </div>
+        <div class="dimension">
+          <span class="dimension-label">Best when...</span>
+        </div>
+        <div class="cell cell--usage cell--advantage">
+          <span class="cell-value">Usage patterns are unknown, variable, or AI-driven</span>
+        </div>
+      </div>
+
+      <!-- CATEGORY: Buyer Psychology -->
+      <div class="category-header" style="grid-column: 1 / -1;">
+        <span class="category-tag">07</span>
+        <span class="category-name">BUYER PSYCHOLOGY</span>
+      </div>
+
+      <div class="row">
+        <div class="cell cell--seat">
+          <span class="cell-value" data-quote>"I own access to this tool"</span>
+        </div>
+        <div class="dimension">
+          <span class="dimension-label">Mental model</span>
+        </div>
+        <div class="cell cell--usage">
+          <span class="cell-value" data-quote>"I pay for outcomes I actually receive"</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="cell cell--seat cell--advantage">
+          <span class="cell-value">Simple to reason about — easy to budget and forecast</span>
+        </div>
+        <div class="dimension">
+          <span class="dimension-label">Cognitive load</span>
+        </div>
+        <div class="cell cell--usage cell--risk">
+          <span class="cell-value">Requires usage forecasting — harder to budget upfront</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="cell cell--seat cell--risk">
+          <span class="cell-value">Seat permanence anxiety — every seat feels like a long-term liability</span>
+        </div>
+        <div class="dimension">
+          <span class="dimension-label">Psychological barrier</span>
+        </div>
+        <div class="cell cell--usage cell--advantage">
+          <span class="cell-value" data-quote>"I'll only pay when I get value"</span>
+        </div>
+      </div>
+
+    </main>
+
+
+
+  </div>
+</body>
+</html>
