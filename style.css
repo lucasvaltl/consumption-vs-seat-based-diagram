@@ -214,12 +214,9 @@ html, body {
   text-align: left;
 }
 
-.cell--risk {
-  background: var(--risk-bg);
-}
-
+.cell--risk,
 .cell--advantage {
-  background: var(--advantage-bg);
+  background: var(--white);
 }
 
 .cell-value {
