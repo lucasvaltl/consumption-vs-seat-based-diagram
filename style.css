@@ -102,7 +102,6 @@ html, body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
-  border-top: 2px solid var(--black);
 }
 
 .model-card {
